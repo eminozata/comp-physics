@@ -23,6 +23,10 @@ h= vt[1] - vt[0]
 for k in range(1, N):
     velocities[k] = velocities[k-1] - h * velocities[k-1]
     print("k: ",k, " ", velocities[k])
+
+#plot analytical values
 plt.plot(vt, analytical_velocities)
+
+#plot our values
 plt.plot(vt, velocities)
 plt.show()
