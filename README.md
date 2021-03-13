@@ -1,2 +1,2 @@
 # Computational Physics
-Computational Physics Lecture Notes 
+Computational Physics Lecture Codes
