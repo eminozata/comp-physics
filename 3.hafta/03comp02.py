@@ -54,9 +54,11 @@ t_final = 20.
 x_initial = np.array([pi,0.001])
 t1=time()
 
+vt,X_euler = integrator(nolinear_pendulum, euler,0.0,20.,np.array([1., 0., 0.]),4000 )
 vt, X = integrator(nolinear_pendulum, runga_kutta4, 0.0, 20., np.array([1., 0., 0.]), 4000)
 t2 = time()
 t_runga_kutta = t2-t1
 
-plt.plot(vt,X[:,0]%(2*pi),vt,X[:,1])
+#plt.plot(vt,X[:,0]%(2*pi),vt,X[:,1])
+plt.plot(vt,X_euler[:,0]%(2*pi),vt,X_euler[:,1])
 plt.show()
